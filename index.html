@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Library</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="branding">
+                <div class="item">
+                    <span class="mdi mdi-view-dashboard"></span>
+                    <p id="brand">My Library</p>
+                </div>
+            </div>
+            <div class="nav">
+                <form>
+                    <div class="item">
+                        <input type="text" id="title"
+                            placeholder="Please insert book title"
+                            name="title" required>
+                    </div>
+
+                    <div class="item">
+                        <input type="text" id="author"
+                            placeholder="Please insert book author"
+                        name="author" required>
+                    </div>
+
+                    <div class="item">
+                        <input type="number" id="pages"
+                            placeholder="Please insert book pages"
+                            min="1"
+                            name="pages" required>
+                    </div>
+
+                    <div class="item">
+                        <label for="read">Have read? </label>
+                        <input type="checkbox" id="read"
+                            name="read">
+                    </div>
+
+                    <div class="item">
+                        <input type="submit" value="Add Book" id="addBtn">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main-content -->
+        <div class="main">
+
+            <div class="stat">
+                <p>Read: <span id="book-read"></span></p>
+                <p>Unread: <span id="book-unread"></span></p>
+                <p>Total: <span id="total"></span></p>
+                <button id="delAll">Delete All</button>
+            </div>
+            
+            <div class="lib-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
